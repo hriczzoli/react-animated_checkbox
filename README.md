@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-animated_checkbox
+npm install --save @hriczzoli/react-animated_checkbox
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save react-animated_checkbox
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-animated_checkbox'
+import MyComponent from '@hriczzoli/react-animated_checkbox'
 
 class Example extends Component {
   render () {
