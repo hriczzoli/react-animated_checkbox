@@ -15,12 +15,12 @@ npm install --save @hriczzoli/react-animated_checkbox
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from '@hriczzoli/react-animated_checkbox'
+import {default as AnimatedCheckbox} from '@hriczzoli/react-animated_checkbox'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <AnimatedCheckbox />
     )
   }
 }
@@ -36,12 +36,12 @@ disabled: bool
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from '@hriczzoli/react-animated_checkbox'
+import {default as AnimatedCheckbox} from '@hriczzoli/react-animated_checkbox'
 
 class App extends Component {
   render () {
     return (
-      <MyComponent
+      <AnimatedCheckbox
         name="NPM"
         value={value}
         disabled={disabled}
