@@ -26,6 +26,34 @@ class Example extends Component {
 }
 ```
 
+## Props
+
+name: string,
+value: bool,
+onChange: func,
+disabled: bool
+
+```jsx
+import React, { Component } from 'react'
+
+import MyComponent from '@hriczzoli/react-animated_checkbox'
+
+class App extends Component {
+  render () {
+    return (
+      <MyComponent
+        name="NPM"
+        value={value}
+        disabled={disabled}
+        onChange={() => { this.setState({ isChecked:!this.state.isChecked })}}
+      />
+    )
+  }
+}
+
+```
+
+
 ## License
 
 MIT © [hriczzoli](https://github.com/hriczzoli)
