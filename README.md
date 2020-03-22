@@ -2,6 +2,8 @@
 
 > A customizable animated checkbox for React
 
+![Preview of checkbox](checkbox.gif)
+
 [![NPM](https://img.shields.io/npm/v/react-animated_checkbox.svg)](https://www.npmjs.com/package/react-animated_checkbox) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
