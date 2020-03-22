@@ -1,5 +1,20 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
   font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testCard {
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 }

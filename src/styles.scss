@@ -1,0 +1,68 @@
+/* add css styles here (optional) */
+
+
+input[type=checkbox] {
+  display: none;
+  pointer-events: none;
+
+  &:checked + label {
+    .checkCircle {
+      animation: changeShape 1.5s;
+    }
+    svg {
+      polyline {
+        stroke-dashoffset: 0;
+        transition-delay: 1600ms;
+        transition-property: stroke-dashoffset;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
+      }
+    }
+  }
+}
+
+label {
+  color: rgb(97,156,122);
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+
+  .checkCircle {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid rgb(97,156,122);
+    border-radius: 10px;
+  }
+
+  svg {
+    width: 2em;
+    position: absolute;
+    top: 10%;
+    polyline {
+      stroke: rgb(97,156,122);
+      fill: white;
+      stroke-width: 6;
+      stroke-dasharray: 365;
+      stroke-dashoffset: 365;
+      transition: stroke-dashoffset .3s ease-out;
+
+    }
+  }
+}
+
+@keyframes changeShape {
+  0% {border-radius: 10px; border-color: rgb(97,156,122)}
+  25% {border-radius: 0px; border-color: rgb(120,132,152); transform: rotate(90deg);}
+  50% {border-radius: 10px;border-color: rgb(97,156,122)}
+  75% {border-radius: 0px; border-color: rgb(120,132,152); transform: rotate(-90deg);}
+  100% {border-radius: 10px;border-color: rgb(97,156,122)}
+}
