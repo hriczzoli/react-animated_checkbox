@@ -1,6 +1,6 @@
 {
   "name": "@hriczzoli/react-animated_checkbox",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A customizable animated checkbox for React",
   "author": "hriczzoli",
   "license": "MIT",
@@ -61,8 +61,6 @@
     "dist"
   ],
   "dependencies": {
-    "node-sass": "^4.13.1",
-    "react-motion": "^0.5.2",
-    "styled-components": "^5.0.1"
+    "node-sass": "^4.13.1"
   }
 }
