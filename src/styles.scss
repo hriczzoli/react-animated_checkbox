@@ -9,6 +9,26 @@ input[type=checkbox] {
     .checkCircle {
       animation: changeShape 1.5s;
     }
+    .checkCircleFill {
+      background-color: rgb(97,156,122);
+      transition-delay: 1600ms;
+      transition-property: background-color;
+      transition-duration: .5s;
+      transition-timing-function: ease-in-out;
+      animation: changeShapeFill 1.5s;
+
+      svg {
+        polyline {
+          stroke: white;
+          fill: rgb(97,156,122);
+          stroke-dashoffset: 0;
+          transition-delay: 1600ms;
+          transition-property: all;
+          transition-duration: .5s;
+          transition-timing-function: ease-in-out;
+        }
+      }
+    }
     svg {
       polyline {
         stroke-dashoffset: 0;
@@ -42,12 +62,34 @@ label {
     border: 1px solid rgb(97,156,122);
     border-radius: 10px;
   }
+  .checkCircleFill {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid rgb(97,156,122);
+    border-radius: 10px;
+
+    svg {
+      width: 2em;
+      position: absolute;
+      top: 12%;
+      left: 9%;
+      polyline {
+        stroke: white;
+        fill: white;
+        stroke-width: 6;
+        stroke-dasharray: 365;
+        stroke-dashoffset: 365;
+        transition: stroke-dashoffset .3s ease-out;
+
+      }
+    }
+  }
 
   svg {
     width: 2em;
     position: absolute;
-    top: 10%;
-    left: 22%;
+    top: 12%;
+    left: 9%;
     polyline {
       stroke: rgb(97,156,122);
       fill: white;
@@ -58,9 +100,21 @@ label {
 
     }
   }
+
+  span {
+    font-size: 0.6em;
+  }
 }
 
 @keyframes changeShape {
+  0% {border-radius: 10px; border-color: rgb(97,156,122)}
+  25% {border-radius: 0px; border-color: rgb(120,132,152); transform: rotate(90deg);}
+  50% {border-radius: 10px;border-color: rgb(97,156,122)}
+  75% {border-radius: 0px; border-color: rgb(120,132,152); transform: rotate(-90deg);}
+  100% {border-radius: 10px;border-color: rgb(97,156,122)}
+}
+
+@keyframes changeShapeFill {
   0% {border-radius: 10px; border-color: rgb(97,156,122)}
   25% {border-radius: 0px; border-color: rgb(120,132,152); transform: rotate(90deg);}
   50% {border-radius: 10px;border-color: rgb(97,156,122)}

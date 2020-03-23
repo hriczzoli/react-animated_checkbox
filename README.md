@@ -2,7 +2,7 @@
 
 > A customizable animated checkbox for React
 
-![Preview of checkbox](checkbox.gif)
+![Preview of checkbox](checkbox-animation.gif)
 
 [![NPM](https://img.shields.io/npm/v/react-animated_checkbox.svg)](https://www.npmjs.com/package/react-animated_checkbox) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -30,10 +30,14 @@ class Example extends Component {
 
 ## Props
 
-name: string,
-value: bool,
-onChange: func,
-disabled: bool
+| Props | Values |
+| --- | --- |
+| id | string |
+| name | string |
+| value | bool |
+| onChange | function |
+| disabled | bool |
+| fill | bool |
 
 ```jsx
 import React, { Component } from 'react'
@@ -44,6 +48,7 @@ class App extends Component {
   render () {
     return (
       <AnimatedCheckbox
+        id="check"
         name="NPM"
         value={value}
         disabled={disabled}

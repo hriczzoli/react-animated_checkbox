@@ -12,7 +12,16 @@ export default class App extends Component {
           disabled={this.props.disabled}
           onChange={this.props.onChange}
           checked={this.props.value}
-          name={"FRE"}
+          name={"MON"}
+          fill={false}
+        />
+        <AnimatedCheckbox
+          id={"test2"}
+          disabled={this.props.disabled}
+          onChange={this.props.onChange}
+          checked={this.props.value}
+          name={"TUE"}
+          fill={true}
         />
       </div>
     )

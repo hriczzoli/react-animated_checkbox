@@ -10,35 +10,39 @@ export default class AnimatedCheckbox extends Component {
   }
 
   static propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
     value: PropTypes.bool,
     onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    fill: PropTypes.bool
   }
 
   static defaultProps = {
+    id: 'test',
     name: 'FRE',
     value: false,
-    disabled: false
+    disabled: false,
+    fill: true
   }
 
   render() {
     const {
-      name, value, onChange, disabled
+      id, name, value, onChange, disabled, fill
     } = this.props
 
     return (
       <div>
         <input
-          id="cb"
+          id={id}
           type="checkbox"
           className={styles.hiddenCheckbox}
           value={value}
           disabled={disabled}
           onChange={() => { this.setState({ isChecked: !this.state.isChecked })}}
         />
-        <label htmlFor="cb">
-          <div className={styles.checkCircle}>
+        <label htmlFor={id}>
+          <div className={fill ? styles.checkCircleFill : styles.checkCircle}>
             <svg
               id="Layer_1"
               viewBox="0 0 104 104"
@@ -51,7 +55,7 @@ export default class AnimatedCheckbox extends Component {
               ></polyline>
             </svg>
           </div>
-          {name}
+          <span>{name}</span>
         </label>
       </div>
     );
