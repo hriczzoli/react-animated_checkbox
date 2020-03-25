@@ -161,17 +161,17 @@ var AnimatedCheckbox = function (_Component) {
 AnimatedCheckbox.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  value: PropTypes.bool,
+  value: PropTypes.node,
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   fill: PropTypes.bool
 };
 AnimatedCheckbox.defaultProps = {
   id: 'test',
-  name: 'FRE',
-  value: false,
+  name: 'NPM',
+  value: 1,
   disabled: false,
-  fill: true
+  fill: false
 };
 
 export default AnimatedCheckbox;

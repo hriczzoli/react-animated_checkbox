@@ -30,14 +30,15 @@ class Example extends Component {
 
 ## Props
 
-| Props | Values |
-| --- | --- |
-| id | string |
-| name | string |
-| value | bool |
-| onChange | function |
-| disabled | bool |
-| fill | bool |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | string | test | plain text |
+| name | string | NPM | plain text |
+| value | node | 1 | anything that can be rendered: numbers, strings, elements or an arra (or fragment) containing these types |
+| onChange | function |  | accepts a function - use e.g. to toggle isChecked state of the component
+| disabled | bool | false | true/false to predetermine if checkbox should be checked when component is rendered
+| fill | bool | false | true/false to select wether or not checkbox has a green background
+
 
 ```jsx
 import React, { Component } from 'react'
@@ -50,8 +51,8 @@ class App extends Component {
       <AnimatedCheckbox
         id="check"
         name="NPM"
-        value={value}
-        disabled={disabled}
+        value={2}
+        disabled={false}
         onChange={() => { this.setState({ isChecked:!this.state.isChecked })}}
       />
     )

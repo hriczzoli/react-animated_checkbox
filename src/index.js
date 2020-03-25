@@ -12,7 +12,7 @@ export default class AnimatedCheckbox extends Component {
   static propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
-    value: PropTypes.bool,
+    value: PropTypes.node,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
     fill: PropTypes.bool
@@ -20,10 +20,10 @@ export default class AnimatedCheckbox extends Component {
 
   static defaultProps = {
     id: 'test',
-    name: 'FRE',
-    value: false,
+    name: 'NPM',
+    value: 1,
     disabled: false,
-    fill: true
+    fill: false
   }
 
   render() {
